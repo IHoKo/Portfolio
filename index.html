@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hosnieh Kor | Data Scientist</title>
+  <title>Hosnieh Kor | Senior Data Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -11,129 +11,195 @@
       margin: 0;
       background: #0f172a;
       color: #e2e8f0;
+      display: flex;
     }
-    header {
-      padding: 70px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #1e293b, #020617);
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 320px;
+      min-height: 100vh;
+      background: #020617;
+      padding: 40px 25px;
+      position: sticky;
+      top: 0;
     }
-    h1 { font-size: 44px; margin-bottom: 10px; }
-    h2 { color: #38bdf8; margin-top: 40px; }
-    .container {
-      max-width: 1100px;
+
+    .sidebar h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .sidebar p.title {
+      color: #38bdf8;
+      margin-bottom: 30px;
+    }
+
+    .sidebar section {
+      margin-bottom: 30px;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      flex: 1;
+      padding: 40px;
+      max-width: 900px;
       margin: auto;
-      padding: 20px;
     }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
     .card {
       background: #1e293b;
       padding: 20px;
-      margin: 25px 0;
-      border-radius: 14px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
-    img {
+
+    /* SMALLER IMAGES */
+    .project-img {
       width: 100%;
-      border-radius: 10px;
-      margin-top: 15px;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
     }
+
     .btn {
       display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
+      margin-top: 10px;
+      padding: 8px 14px;
       background: #38bdf8;
       color: black;
       border-radius: 6px;
       font-weight: bold;
       text-decoration: none;
     }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        position: relative;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Hosnieh Kor</h1>
-  <p>Data Scientist | Data Engineer | Microsoft Fabric | Power BI</p>
-</header>
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+    <h1>Hosnieh Kor</h1>
+    <p class="title">Senior Data Scientist</p>
 
-<div class="container">
-
-  <section>
-    <h2>👋 About Me</h2>
-    <div class="card">
+    <section>
+      <h2>👋 About Me</h2>
       <p>
-        I’m a data scientist focused on building scalable data solutions and turning complex data into actionable insights.
-        I specialize in Microsoft Fabric, Power BI dashboards, and data pipelines.
+        Senior Data Scientist specializing in end-to-end data solutions using Microsoft Fabric,
+        Power BI, and Python. I build scalable data pipelines, advanced analytics solutions,
+        and interactive dashboards that translate complex data into actionable insights.
       </p>
-    </div>
-  </section>
+      <p>
+        My work spans data engineering and data science, including member segmentation,
+        sentiment analysis, and business intelligence solutions.
+      </p>
+      <p>
+        Recently, I’ve been exploring AI-driven experiences, including building an interactive
+        resume powered by agents that can answer questions about my work.
+      </p>
+    </section>
 
-  <section>
+    <section>
+      <h2>🛠️ Skills</h2>
+      <p>
+        Python<br>
+        SQL<br>
+        Power BI<br>
+        Microsoft Fabric<br>
+        Machine Learning<br>
+        NLP<br>
+        AI Agents
+      </p>
+    </section>
+
+    <section>
+      <h2>📫 Contact</h2>
+      <p><a href="https://github.com/IHoKo">GitHub</a></p>
+      <p><a href="https://ihoko.github.io/Resume/HosniehKorResume.html">Interactive Resume</a></p>
+      <p>Add LinkedIn</p>
+    </section>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="main">
+
     <h2>🚀 Featured Projects</h2>
 
-    <!-- Project 1 -->
+    <!-- AI Resume -->
+    <div class="card">
+      <h3>🤖 AI-Powered Interactive Resume</h3>
+      <p>
+        Built an interactive resume that allows users to ask questions about my experience using AI agents.
+      </p>
+      <p><b>Impact:</b> Transforms static resumes into dynamic, conversational experiences.</p>
+
+      <img class="project-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+
+      <a href="https://ihoko.github.io/Resume/HosniehKorResume.html" class="btn">Try It</a>
+    </div>
+
+    <!-- Dashboard -->
     <div class="card">
       <h3>📊 Vehicle Energy Dashboard</h3>
-      <p><b>Tools:</b> Power BI, Microsoft Fabric</p>
       <p>
-        Built an interactive dashboard analyzing vehicle energy consumption using the Vehicle Energy Dataset (VED).
-        Designed data pipelines and created insights for energy efficiency trends.
+        Built an interactive Power BI dashboard using Microsoft Fabric to analyze energy consumption.
       </p>
-      <p><b>Impact:</b> Demonstrates end-to-end analytics workflow from ingestion to visualization.</p>
+      <p><b>Impact:</b> End-to-end analytics pipeline with business insights.</p>
 
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="dashboard">
+      <img class="project-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 
       <a href="https://github.com/IHoKo" class="btn">View Project</a>
     </div>
 
-    <!-- Project 2 -->
+    <!-- NLP -->
     <div class="card">
-      <h3>🧠 Sentiment Analysis Project</h3>
-      <p><b>Tools:</b> Python, NLP</p>
+      <h3>🧠 Sentiment Analysis</h3>
       <p>
-        Developed a sentiment analysis model to analyze member feedback and uncover patterns in user sentiment.
+        NLP solution to analyze feedback and extract sentiment trends from text data.
       </p>
-      <p><b>Impact:</b> Helps organizations make data-driven decisions from text data.</p>
+      <p><b>Impact:</b> Enables better decision-making from unstructured data.</p>
 
-      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="nlp">
+      <img class="project-img" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
 
       <a href="https://github.com/IHoKo" class="btn">View Project</a>
     </div>
 
-    <!-- Project 3 -->
+    <!-- Pipeline -->
     <div class="card">
-      <h3>⚙️ Data Engineering & ETL Pipelines</h3>
-      <p><b>Tools:</b> Python, SQL, Fabric</p>
+      <h3>⚙️ Data Pipelines</h3>
       <p>
-        Built automated pipelines for cleaning, transforming, and preparing data for analytics and reporting.
+        Built ETL pipelines for cleaning and transforming data for analytics.
       </p>
-      <p><b>Impact:</b> Improves data quality and reduces manual processing time.</p>
+      <p><b>Impact:</b> Improved data quality and reduced manual effort.</p>
 
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" alt="pipeline">
+      <img class="project-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
 
       <a href="https://github.com/IHoKo" class="btn">View Project</a>
     </div>
 
-  </section>
-
-  <section>
-    <h2>🛠️ Skills</h2>
-    <div class="card">
-      <p>
-        Python | SQL | Power BI | Microsoft Fabric | Data Engineering | NLP | Machine Learning
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2>📫 Contact</h2>
-    <div class="card">
-      <p><a href="https://github.com/IHoKo">GitHub</a></p>
-      <p>Add your LinkedIn here</p>
-    </div>
-  </section>
-
-</div>
+  </div>
 
 </body>
 </html>
