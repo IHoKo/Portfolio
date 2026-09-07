@@ -150,6 +150,20 @@
 
     <h2>🚀 Featured Projects</h2>
 
+    <!-- Ticker -->
+    <div class="card">
+      <h3>📈 Ticker — Live Trading Dashboard</h3>
+      <p>
+        Built a real-time stock dashboard that streams live market prices over a WebSocket, derives a portfolio from an append-only transaction ledger, and answers questions through an AI analyst. A price hub absorbs the rate mismatch between the market and the browser — a liquid symbol prints hundreds of trades a second, so the server coalesces to at most four updates per second per symbol and the tab stays responsive. Positions, cost basis and P/L are recomputed from the ledger using a FIFO lot engine rather than stored, so the numbers can always be rebuilt and checked. FastAPI + React + SQLite in one container on Fly.io, deployed on every push.
+      </p>
+      <p><b>Impact:</b> The AI can propose portfolio changes but structurally cannot make them — its tool dispatcher is handed a read-only reader, never a database connection, and a test asserts the ledger is byte-for-byte unchanged after every tool runs. 291 tests cover the money paths hardest, including hand-computed P/L across partial sells and sells crossing multiple tax lots.</p>
+
+      <img class="project-img" src="ticker-portfolio.png" alt="Ticker dashboard: split-flap ticker tape with live prices, portfolio value and P/L tiles, a positions table, and portfolio-value and candlestick charts">
+
+      <a href="https://ticker-dash.fly.dev/" class="btn" style="margin-right:8px;">View Live</a>
+      <a href="https://github.com/IHoKo/Live-Trading-Dashboard" class="btn">View Code</a>
+    </div>
+
     <!-- Digital Twin -->
     <div class="card">
       <h3>🧠 AI Digital Twin</h3>
